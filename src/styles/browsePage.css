@@ -1,0 +1,175 @@
+/* Page Background */
+.trase-page {
+    min-height: 100vh;
+    background:
+            radial-gradient(900px 500px at 15% 5%, rgba(255, 43, 214, 0.12), transparent 60%),
+            radial-gradient(700px 450px at 85% 10%, rgba(255, 122, 24, 0.10), transparent 55%),
+            #07080a;
+}
+
+/* centered dark stage panel */
+.trase-stage {
+    max-width: 1120px;
+    margin: 0 auto;
+    border-radius: 28px;
+    padding: 44px 44px 28px;
+    background: #111214;
+    position: relative;
+}
+
+/* Title */
+.trase-title {
+    color: rgba(255,255,255,0.92);
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+/* Divider */
+.trase-divider {
+    height: 2px;
+    width: 100%;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #ff2bd6 0%, #ff7a18 60%, transparent);
+}
+
+/* Controls */
+.trase-controls {
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.10);
+    background: rgba(255,255,255,0.05);
+    padding: 14px 16px;
+}
+
+.trase-controls-row {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.trase-controls-row .trase-input {
+    flex: 1;
+    min-width: 320px;
+}
+
+.trase-controls-row .MuiFormControlLabel-root {
+    margin-left: 0;
+}
+
+/* controls: make the input feel like Trase pill */
+.trase-input .MuiOutlinedInput-root {
+    background: rgba(0,0,0,0.25);
+    border-radius: 12px;
+}
+
+.trase-input .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(255,255,255,0.12);
+}
+
+.trase-input:hover .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(255,255,255,0.18);
+}
+
+.trase-input .MuiInputLabel-root {
+    color: rgba(255,255,255,0.65);
+}
+
+.trase-input input {
+    color: rgba(255,255,255,0.85);
+}
+
+.trase-label {
+    color: rgba(255,255,255,0.75);
+}
+
+/* Trase-like orange CTA */
+.trase-button {
+    border-radius: 10px;
+    font-weight: 600;
+    text-transform: none;
+    background: #ff6a1a;
+    color: #fff;
+}
+.trase-button:hover {
+    background: #ff7a33;
+}
+
+/* Grid specific */
+.trase-grid {
+    width: 100%;
+    height: min(60vh, 560px);
+    min-height: 360px;
+}
+
+.trase-grid .ag-root-wrapper {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* AG-GRID related */
+.ag-theme-alpine .ag-header-cell-label .ag-header-cell-text {
+    font-weight: 700 !important;
+}
+
+.ag-theme-alpine .ag-header-cell-label {
+    font-size: 15px;
+    line-height: 1.2;
+}
+.ag-theme-alpine {
+    --ag-background-color: #151618;
+    --ag-foreground-color: rgba(255,255,255,0.85);
+    --ag-border-color: rgba(255,255,255,0.08);
+}
+
+.ag-theme-alpine .ag-header {
+    background: #1c1d1f;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.ag-theme-alpine .ag-header-cell-text {
+    font-weight: 600;
+    color: rgba(255,255,255,0.9);
+}
+
+.ag-theme-alpine .ag-row {
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.ag-theme-alpine .ag-cell {
+    color: rgba(255,255,255,0.82);
+}
+
+.ag-theme-alpine .ag-row-hover {
+    background-color: rgba(255,255,255,0.04) !important;
+}
+
+.ag-theme-alpine .ag-row-selected {
+    background-color: rgba(255,122,24,0.12) !important;
+}
+
+.ag-theme-alpine .ag-checkbox-input-wrapper {
+    filter: brightness(1.2);
+}
+
+/* Footer */
+.trase-footer {
+    padding: 10px 16px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.03);
+}
+
+.trase-footer-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.75);
+}
+
+/* make MUI Paper dark (otherwise it stays white) */
+.trase-panel.MuiPaper-root {
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 18px;
+    overflow: hidden; /* keeps footer + grid edges clean */
+    box-shadow: none; /* optional: remove Paper shadow */
+}

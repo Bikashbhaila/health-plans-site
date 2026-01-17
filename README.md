@@ -1,73 +1,82 @@
-# React + TypeScript + Vite
+# TRASE Health Plans Browser & Comparison App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + TypeScript web application for browsing and comparing health-insurance plans with a clean TRASE-styled UI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Overview
+- Browse health plans in an interactive AG Grid table
+- Search, filter, and sort by monthly premium
+- Select up to **3 plans** for comparison
+- View a side-by-side Compare page
+- Responsive, dark-themed interface
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Screenshots
 
-## Expanding the ESLint configuration
+### **Browse Page**
+![Browse Page](public/screenshots/browse-page.png)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### **Comparison Page**
+![Compare Page](public/screenshots/compare-page.png)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Features
+- Fast search + premium sorting
+- Comparison tray with selection limit feedback
+- LocalStorage persistence (selected plans remain after reload)
+- Clean Material-UI controls
+- End-to-end tests using Cypress
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## Tech Stack
+- **React (Vite) + TypeScript**
+- **Material UI**
+- **AG Grid Community**
+- **React Router v6**
+- **LocalStorage** (persistence)
+- **Cypress** (E2E testing)
+
+---
+
+## Installation & Setup
+
+### 1. Install dependencies
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+npm install
 ```
+### 2. Run the development server
+```
+npm run dev
+```
+App runs at: http://localhost:5173
+### 3. Run Cypress end-to-end tests
+```
+npm run cypress:open
+```
+### 4. Build for production
+```
+npm run build
+```
+## State Management & Persistence Strategy
+The application uses React Hooks for local UI state:
+
+| State           | Purpose                            |
+| --------------- | ---------------------------------- |
+| `search`        | Filters health plans in AG Grid    |
+| `sortByPremium` | Sorts plans by premium             |
+| `selectedPlans` | Tracks up to 3 comparison plans    |
+| `viewStats`     | Displays count and average premium |
+
+### Persistence
+Selected plans are stored using localStorage for seamless navigation and page reloads.
+Two helper functions manage this behavior:
+```
+saveCompare(plans);
+loadCompare();
+```
+This solution avoids heavier state management libraries while keeping the app responsive and simple.
+
