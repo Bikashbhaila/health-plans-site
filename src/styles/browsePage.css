@@ -49,7 +49,20 @@
 
 .trase-controls-row .trase-input {
     flex: 1;
-    min-width: 320px;
+    min-width: 0; /* allow shrinking on small screens */
+}
+
+/* Optional: adjust layout on narrow screens */
+@media (max-width: 480px) {
+    .trase-controls-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .trase-controls-row .trase-input {
+        width: 100%;
+    }
 }
 
 .trase-controls-row .MuiFormControlLabel-root {
