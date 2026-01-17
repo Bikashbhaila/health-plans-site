@@ -4,7 +4,7 @@ import ComparePage from "./pages/ComparePage.tsx";
 
 export default function App() {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename={import.meta.env.BASE_URL}>
             <Routes>
                 <Route path="/" element={<BrowsePage />} />
                 <Route path="/compare" element={<ComparePage />} />

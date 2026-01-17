@@ -13,7 +13,7 @@ import {
 } from "@mui/material";
 
 import type {HealthPlan} from "../util/types.ts";
-import {fetchHealthPlans} from "../api/healthPlans";
+import {fetchHealthPlans} from "../services/healthPlanServices.ts";
 import {healthPlanColumnDefs} from "../helpers/healthPlanColumns.ts";
 import {MAX_COMPARE} from "../util/constants.ts";
 import {saveCompare} from "../helpers/compareStorage.ts";
