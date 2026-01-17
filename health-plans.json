@@ -1,0 +1,98 @@
+[
+  {
+    "id": "p-001",
+    "name": "Basic Bronze",
+    "provider": "Blue Valley Health",
+    "monthlyPremium": 214,
+    "deductible": 7000,
+    "description": "Low monthly cost with a higher deductible."
+  },
+  {
+    "id": "p-002",
+    "name": "Bronze Choice",
+    "provider": "SummitCare",
+    "monthlyPremium": 236,
+    "deductible": 6500,
+    "description": "Budget plan with standard network access."
+  },
+  {
+    "id": "p-003",
+    "name": "Standard Silver",
+    "provider": "Cedar Health",
+    "monthlyPremium": 298,
+    "deductible": 4000,
+    "description": "Balanced premium and deductible."
+  },
+  {
+    "id": "p-004",
+    "name": "Silver Plus",
+    "provider": "Blue Valley Health",
+    "monthlyPremium": 322,
+    "deductible": 3500,
+    "description": "Lower cost-sharing for common care."
+  },
+  {
+    "id": "p-005",
+    "name": "HSA Silver Saver",
+    "provider": "SummitCare",
+    "monthlyPremium": 279,
+    "deductible": 4500,
+    "description": "HSA-compatible plan with moderate costs."
+  },
+  {
+    "id": "p-006",
+    "name": "Family Silver",
+    "provider": "Northlake Insurance",
+    "monthlyPremium": 341,
+    "deductible": 3000,
+    "description": "Family-friendly coverage with predictable copays."
+  },
+  {
+    "id": "p-007",
+    "name": "Gold Select",
+    "provider": "Cedar Health",
+    "monthlyPremium": 417,
+    "deductible": 1500,
+    "description": "Lower deductible with broader coverage."
+  },
+  {
+    "id": "p-008",
+    "name": "Gold Preferred",
+    "provider": "Blue Valley Health",
+    "monthlyPremium": 452,
+    "deductible": 1200,
+    "description": "Lower out-of-pocket costs for frequent care."
+  },
+  {
+    "id": "p-009",
+    "name": "Gold Value",
+    "provider": "Northlake Insurance",
+    "monthlyPremium": 395,
+    "deductible": 2000,
+    "description": "Straightforward copays and solid coverage."
+  },
+  {
+    "id": "p-010",
+    "name": "Platinum Complete",
+    "provider": "SummitCare",
+    "monthlyPremium": 528,
+    "deductible": 750,
+    "description": "Very low deductible with strong coverage."
+  },
+  {
+    "id": "p-011",
+    "name": "Platinum Prime",
+    "provider": "Cedar Health",
+    "monthlyPremium": 561,
+    "deductible": 500,
+    "description": "Lowest deductible with premium benefits."
+  },
+  {
+    "id": "p-012",
+    "name": "Silver Connect",
+    "provider": "Northlake Insurance",
+    "monthlyPremium": 312,
+    "deductible": 3200,
+    "description": "Mid-tier plan with simple copays."
+  }
+]
