@@ -21,6 +21,7 @@ import ComparisonTray from "../components/ComparisonTray.tsx";
 import SnackBarWrapper from "../components/SnackBar.tsx";
 
 import '../styles/browsePage.css';
+import ClearSearch from "../components/ClearSearch.tsx";
 
 export default function BrowsePage() {
     const [healthPlans, setHealthPlans] = useState<HealthPlan[]>([]);
@@ -166,7 +167,10 @@ export default function BrowsePage() {
                             onChange={(e) => setSearch(e.target.value)}
                             size='small'
                         />
-
+                        <ClearSearch
+                            visible={search.length > 0}
+                            onClear={() => setSearch("")}
+                        />
                         <FormControlLabel
                             label='Sort by monthly premium'
                             className='trase-label'
