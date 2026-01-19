@@ -18,6 +18,5 @@ export type SnackBarWrapperProps = {
 };
 
 export type ClearSearchProps = {
-    visible: boolean;
     onClear: () => void;
 }

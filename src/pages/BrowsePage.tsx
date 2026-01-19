@@ -166,10 +166,11 @@ export default function BrowsePage() {
                             value={search}
                             onChange={(e) => setSearch(e.target.value)}
                             size='small'
-                        />
-                        <ClearSearch
-                            visible={search.length > 0}
-                            onClear={() => setSearch("")}
+                            slotProps={{
+                                input: {
+                                    endAdornment: search.length > 0 && <ClearSearch onClear={() => setSearch("")}/>
+                                }
+                            }}
                         />
                         <FormControlLabel
                             label='Sort by monthly premium'

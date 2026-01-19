@@ -4,9 +4,9 @@ import type {ClearSearchProps} from "../util/types.ts";
 
 export default function ClearSearch(props: ClearSearchProps) {
 
-    const {visible, onClear} = props;
+    const {onClear} = props;
     return (
-        visible && <InputAdornment position='end'>
+        <InputAdornment position='end'>
             <IconButton
                 size={'small'}
                 onClick={onClear}
